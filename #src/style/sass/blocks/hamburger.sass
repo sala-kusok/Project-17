@@ -1,0 +1,73 @@
+$hamburger-color: #e9eae2
+$hamburger-color-hover: #f8c255
+
+.hamburger
+  appearance: none
+  background: none
+  padding: 0
+  border: 3px solid $hamburger-color
+  box-sizing: border-box
+  transition: 0.4s border
+  cursor: pointer
+
+  &:hover, &:active
+    border: 3px solid $hamburger-color-hover
+
+    .hamburger__element
+      background: $hamburger-color-hover
+
+      &::before, &::after
+        background: $hamburger-color-hover
+
+  &:focus
+    outline: none
+
+  .hamburger__element
+    display: block
+    width: 40px
+    height: 3px
+    margin: 0 auto
+    background: $hamburger-color
+    transition: 0.4s background
+
+    &::before, &::after
+      content: ''
+      width: 40px
+      height: 3px
+      background: $hamburger-color
+      display: block
+      transition: 0.4s background
+
+    &::before
+      transform: translateY(-7px)
+
+    &::after
+      transform: translateY(4px)
+
+
+  &--active
+    border: 3px solid $hamburger-color-hover
+
+    &:hover, &:active
+
+      .hamburger__element
+        background: $hamburger-color
+
+        &::before, &::after
+          background: $hamburger-color
+
+    .hamburger__element
+      transform: rotate(45deg)
+
+      &::before
+        display: none
+
+      &::after
+        transform: rotate(-90deg)
+
+
+
+
+
+
+

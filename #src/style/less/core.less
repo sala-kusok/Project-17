@@ -1,0 +1,56 @@
+
+//-----===== Базовые настройки ====-----//
+
+body {
+  background: @background-body;
+  color: @color-body;
+  font-weight: @font-weight-body;
+  font-size: @font-size-body;
+  font-family: @font-family-body;
+  line-height: @line-height-body;
+}
+
+img{
+  max-width:100%;
+}
+
+//-----===== Служебные класы - начало ====-----//
+
+// скрывает блок
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0,0,0,0);
+  overflow: hidden;
+}
+
+// отменяет обтекания блока
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+//-----===== Служебные класы - конец ====-----//
+
+//-----===== Общие стили - начало ====-----//
+
+.container{
+  .mix-min-max(@viewport-min, @viewport-container, 0);
+}
+
+.wrapper{
+  .mix-min-max(@viewport-min, @viewport-max, 15px);
+}
+
+//-----===== Общие стили - конец ====-----//
+
+.red{
+  color: blue;
+}

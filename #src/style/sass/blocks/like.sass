@@ -1,0 +1,29 @@
+$text-color: #ff0000
+
+.like
+  max-width: 60px
+  user-select: none
+
+  .like__btn
+    display: block
+    margin: 0 auto 3px auto
+    appearance: none
+    border: none
+    background: none
+    padding: 0
+    cursor: pointer
+
+  .like__svg
+    width: 24px
+    height: 23px
+    fill: $black
+    transition: 0.4s fill
+    &:hover
+      fill: red
+
+  .like__counts
+    text-align: center
+    font-size: fun-px-tp-em(11px)
+    font-family: 'robotocondensedLight', sans-serif
+    color: $text-color
+    line-height: 1

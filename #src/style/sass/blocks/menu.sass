@@ -1,0 +1,79 @@
+$menu-items-bg: #f8c255
+
+.menu
+
+  .menu__items
+    list-style: none
+    padding: 0 120px 0 25px
+    position: absolute
+    top: 0
+    right: 0
+    background-color: $menu-items-bg
+    margin: 0
+    min-width: 570px
+    max-width: 570px
+    height: 100%
+    display: none
+    flex-wrap: wrap
+    align-items: center
+    z-index: -999
+
+    &--active
+      display: flex
+      z-index: 1
+      animation-duration: 0.5s
+      animation-name: menu
+
+  .menu__item
+    font-size: fun-px-tp-em(14px)
+    text-transform: uppercase
+    line-height: 16px
+    letter-spacing: 1px
+
+  .menu__link
+    color: $white
+    text-decoration: none
+    transition: 0.4s color
+    padding: 20px 30px
+    
+    &:hover
+      color: $black
+
+  .menu__hamburger
+    position: relative
+    z-index: 99
+    width: 119px
+    height: 114px
+
+
+@media (min-width: 1500px)
+
+  .menu
+
+    .menu__items
+      min-width: 1100px
+      max-width: 1100px
+
+
+@media (max-width: 768px)
+
+  .menu
+
+    .menu__items
+      min-width: auto
+      height: auto
+      padding-right: 90px
+
+      &--active
+        display: block
+
+    .menu__item
+      margin: 25px 0 20px 0
+
+    .menu__link
+      display: block
+      padding: 5px 20px
+
+    .menu__hamburger
+      width: 70px
+      height: 70px

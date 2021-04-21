@@ -1,0 +1,507 @@
+$element-one-bg: #ebb240
+$element-one-three: #dfe0d9
+$element-one-four: #f7f7f3
+$element-one-five: #576b78
+$element-one-six: #eaeaea
+$element-one-eight: #fcfcfc
+$element-one-nine: #cecece
+$projects-title: #fefefe
+$projects-text: #333333
+
+.projects
+  display: grid
+  grid-template-columns: repeat(16,1fr)
+
+  .projects__element
+    display: flex
+    flex-direction: column
+
+  .projects__links
+    margin: fun-width-interest(170px,465px) 0 fun-width-interest(60px,465px) fun-width-interest(130px,465px)
+
+  .projects__title
+    font-size: fun-px-tp-em(48px)
+    color: $projects-title
+    text-transform: uppercase
+    line-height: 1
+    margin: 0 0 fun-width-interest(155px,465px) fun-width-interest(215px,465px)
+
+  .projects__info
+
+  .projects__name
+    font-size: fun-px-tp-em(24px)
+    font-weight: 300
+    font-family: 'robotocondensedLight', sans-serif
+    color: $projects-text
+    text-transform: uppercase
+    line-height: 1
+    margin: 0 0 15px 0
+
+  .projects__description
+    list-style: none
+    padding: 0
+    margin: 0
+
+  .projects__item, .projects__txt
+    font-size: fun-px-tp-em(12px)
+    font-family: 'robotocondensedLight', sans-serif
+    color: $projects-text
+    text-transform: uppercase
+    line-height: 1
+
+  .projects__txt
+    max-width: 160px
+    text-transform: lowercase
+    margin: 0
+
+    span
+      text-transform: uppercase
+
+  .projects__counter
+    display: flex
+    flex-direction: column
+    max-width: 170px
+
+  .projects__view
+    font-size: fun-px-tp-em(18px)
+    font-family: 'robotocondensedLight', sans-serif
+    color: $projects-text
+    text-transform: uppercase
+    text-decoration: none
+    line-height: 1
+    padding: 0 0 0 25px
+    background: url('../img/arrow-view.svg') left center no-repeat
+    margin: 0
+
+    span
+      border-bottom: 1px solid rgba(0,0,0,0)
+      transition: 0.4s border
+      &:hover
+        border-bottom: 1px solid rgba(0,0,0,1)
+
+
+  .projects__like
+    align-self: center
+
+  .projects__timeline
+    font-size: fun-px-tp-em(14px)
+    color: $projects-text
+    text-transform: uppercase
+    line-height: 1
+    margin: fun-width-interest(60px,465px) 0 fun-width-interest(5px,465px) fun-width-interest(100px,465px)
+
+  .projects__timeline-links
+    margin: 0 0 fun-width-interest(145px,465px) calc(21.5% - 30px)
+
+  .projects__element--one
+    grid-column: span 5
+    grid-row: span 2
+    background-color: $element-one-bg
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="100%" x2="100%" y2="0" stroke="rgb(255,255,255)" stroke-width="1"/></svg>')
+
+  .projects__element--two
+    grid-column: span 6
+    grid-row: span 2
+    background: url("..img/image2.png") right center/auto 100% no-repeat $white
+
+    .projects__info
+      margin: fun-width-interest(85px,570px) 0 fun-width-interest(65px,570px) fun-width-interest(100px,570px)
+
+    .projects__counter
+      margin: 0 0 fun-width-interest(70px,570px) fun-width-interest(100px,570px)
+
+    .projects__view
+      margin-bottom: fun-width-interest(104px,170px)
+
+    @supports (-webkit-appearance: none)
+      background: url("../img/image2.webp") right center/auto 100% no-repeat $white
+
+    @media (min-resolution: 2dppx), (min-width: 1500px)
+      background-image: url("../img/image2-2x.png")
+
+      @supports (-webkit-appearance: none)
+        background: url("../img/image2-2x.webp") right center/ auto 100% no-repeat $white
+
+  .projects__element--three
+    grid-column: span 5
+    grid-row: span 1
+    background: url("../img/image3.png") right center/100% no-repeat $element-one-three
+
+    .projects__info
+      margin: fun-width-interest(40px,465px) 0 fun-width-interest(15px,465px) fun-width-interest(45px,465px)
+
+    .projects__counter
+      margin: 0 0 fun-width-interest(30px,465px) fun-width-interest(45px,465px)
+
+    .projects__view
+      margin-bottom: fun-width-interest(25px,170px)
+
+    @supports (-webkit-appearance: none)
+      background: url("../img/image3.webp") right center/100% no-repeat $element-one-three
+
+    @media (min-resolution: 2dppx), (min-width: 1500px)
+      background-image: url("../img/image3-2x.png")
+
+      @supports (-webkit-appearance: none)
+        background: url("../img/image3-2x.webp") right center/100% no-repeat $element-one-three
+
+  .projects__element--four
+    flex-direction: row
+    align-items: center
+    grid-column: span 5
+    grid-row: span 2
+    background: url("..img/image4.png") center top/100% auto no-repeat $element-one-four
+
+    .projects__info
+      margin: fun-width-interest(340px,465px) fun-width-interest(22px,465px) fun-width-interest(40px,465px) fun-width-interest(60px,465px)
+
+    .projects__counter
+      flex: 0 0 fun-width-interest(180px,465px)
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-start
+      max-width: none
+      margin: fun-width-interest(365px,465px) 0 fun-width-interest(40px,465px) 0
+
+    .projects__view
+      margin-right: fun-width-interest(15px,465px)
+      margin-bottom: 0
+
+    @supports (-webkit-appearance: none)
+      background: url("../img/image4.webp") center top/100% auto no-repeat $element-one-four
+
+    @media (min-resolution: 2dppx), (min-width: 1500px)
+      background-image: url("../img/image4-2x.png")
+
+      @supports (-webkit-appearance: none)
+        background: url("../img/image4-2x.webp") center top/100% auto no-repeat $element-one-four
+
+  .projects__element--five
+    grid-column: span 3
+    grid-row: span 2
+    background: url("../img/image5.png") right bottom/ cover no-repeat $element-one-five
+
+    .projects__info
+      margin: fun-width-interest(40px,300px) 0 fun-width-interest(35px,300px) fun-width-interest(30px,300px)
+
+    .projects__counter
+      margin: 0 0 fun-width-interest(220px,300px) fun-width-interest(30px,300px)
+
+    .projects__view
+      margin-bottom: fun-width-interest(30px,170px)
+
+    .projects__name, .projects__item, .projects__txt, .projects__view
+      color: $white
+
+    .like__svg
+      fill: $white
+      &:hover
+        fill: red
+
+    @supports (-webkit-appearance: none)
+      background: url("../img/image5.webp") right bottom/ cover no-repeat $element-one-five
+
+    @media (min-resolution: 2dppx), (min-width: 1500px)
+      background-image: url("../img/image5-2x.png")
+
+      @supports (-webkit-appearance: none)
+        background: url("../img/image5-2x.webp") right bottom/ cover no-repeat $element-one-five
+
+  .projects__element--six
+    flex-direction: row
+    grid-column: span 8
+    grid-row: span 2
+    background: url("..img/image6.png") left center/ auto 100% no-repeat $element-one-six
+
+    .projects__info
+      margin: fun-width-interest(90px,737px) fun-width-interest(36px,737px) fun-width-interest(290px,737px) fun-width-interest(360px,737px)
+
+    .projects__counter
+      margin: fun-width-interest(90px,737px) 0 fun-width-interest(290px,737px) 0
+
+    .projects__view
+      margin-bottom: 22px
+
+    @supports (-webkit-appearance: none)
+      background: url("../img/image6.webp") left center/ auto 100% no-repeat $element-one-six
+
+    @media (min-resolution: 2dppx), (min-width: 1500px)
+      background-image: url("../img/image6-2x.png")
+
+      @supports (-webkit-appearance: none)
+        background: url("../img/image6-2x.webp") left center/ auto 100% no-repeat $element-one-six
+
+  .projects__element--seven
+    grid-column: span 5
+    grid-row: span 1
+    background: url("..img/image7.png") left center/100% no-repeat $white
+
+    .projects__info
+      margin: fun-width-interest(50px,465px) 0 fun-width-interest(25px,465px) fun-width-interest(248px,465px)
+
+    .projects__counter
+      margin: 0 0 fun-width-interest(25px,465px) fun-width-interest(248px,465px)
+
+    .projects__view
+      margin-bottom: 20px
+
+    @supports (-webkit-appearance: none)
+      background: url("../img/image7.webp") left center/100% no-repeat $white
+
+    @media (min-resolution: 2dppx), (min-width: 1500px)
+      background-image: url("../img/image7-2x.png")
+
+      @supports (-webkit-appearance: none)
+        background: url("../img/image7-2x.webp") left center/100% no-repeat $white
+
+  .projects__element--eight
+    flex-direction: row
+    align-items: center
+    grid-column: span 8
+    grid-row: span 1
+    background: url("..img/image8.png") center top/100% auto no-repeat $element-one-eight
+
+    .projects__info
+      margin: fun-width-interest(200px,735px) fun-width-interest(40px,735px) fun-width-interest(20px,735px) fun-width-interest(150px,735px)
+
+    .projects__counter
+      flex: 0 0 fun-width-interest(200px,735px)
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-start
+      max-width: none
+      margin: fun-width-interest(220px,735px) 0 fun-width-interest(20px,735px) 0
+
+    .projects__view
+      margin-right: fun-width-interest(15px,465px)
+      margin-bottom: 0
+
+    @supports (-webkit-appearance: none)
+      background: url("../img/image8.webp") center top/100% auto no-repeat $element-one-eight
+
+    @media (min-resolution: 2dppx), (min-width: 1500px)
+      background-image: url("../img/image8-2x.png")
+
+      @supports (-webkit-appearance: none)
+        background: url("../img/image8-2x.webp") center top/100% auto no-repeat $element-one-eight
+
+  .projects__element--nine
+    grid-column: span 3
+    grid-row: span 1
+    background: url("..img/image9.png") left center/100% no-repeat $element-one-nine
+
+    .projects__info
+      margin: fun-width-interest(77px,300px) 0 fun-width-interest(28px,300px) fun-width-interest(156px,300px)
+
+    .projects__counter
+      margin: 0 0 fun-width-interest(40px,300px) fun-width-interest(130px,300px)
+
+    .projects__view
+      margin-bottom: 20px
+
+    @supports (-webkit-appearance: none)
+      background: url("../img/image9.webp") left center/100% no-repeat $element-one-nine
+
+    @media (min-resolution: 2dppx), (min-width: 1500px)
+      background-image: url("../img/image9-2x.png")
+
+      @supports (-webkit-appearance: none)
+        background: url("../img/image9-2x.webp") left center/100% no-repeat $element-one-nine
+
+  .projects__element--ten
+    grid-column: span 5
+    grid-row: span 1
+    background-color: $element-one-bg
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="100%" x2="70%" y2="0" stroke="rgb(255,255,255)" stroke-width="1"/></svg>')
+
+
+@media (max-width: 1250px)
+
+  .projects
+
+    .projects__links
+      margin-left: fun-width-interest(80px,465px)
+
+    .projects__title
+      font-size: fun-px-tp-em(34px)
+
+@media (max-width: 980px)
+
+  .projects
+
+    .projects__element--one
+      grid-column: span 7
+      order: 1
+
+    .projects__element--two
+      grid-column: span 9
+      order: 2
+
+    .projects__element--three
+      grid-column: span 9
+      order: 7
+
+    .projects__element--four
+      grid-column: span 7
+      order: 6
+
+    .projects__element--five
+      grid-column: span 6
+      order: 4
+
+    .projects__element--six
+      grid-column: span 10
+      order: 3
+      background: url("../img/image6.png") -130px center/ auto 100% no-repeat $element-one-six
+
+      @supports (-webkit-appearance: none)
+        background: url("../img/image6.webp") -130px center/ auto 100% no-repeat $element-one-six
+
+    .projects__element--seven
+      grid-column: span 9
+      order: 5
+
+    .projects__element--eight
+      grid-column: span 16
+      order: 8
+
+    .projects__element--nine
+      grid-column: span 9
+      order: 9
+
+    .projects__element--ten
+      grid-column: span 7
+      order: 10
+
+@media (max-width: 768px)
+
+  .projects
+
+    .projects__element--two
+
+      .projects__info
+        margin: 5% 0 5% 5%
+
+      .projects__counter
+        max-width: none
+        margin: 0 0 5% 5%
+
+      .projects__view
+        margin-bottom: 25px
+
+      .projects__like
+        align-self: flex-start
+
+    .projects__element--four
+      display: block
+
+      .projects__counter
+        margin: 5% 0 0 12%
+        display: block
+
+      .projects__view
+        margin-bottom: 22px
+        display: inline-block
+
+      .projects__like
+        margin-left: 20px
+        margin-bottom: 5%
+
+    .projects__element--six
+      background: url("../img/image6.png") left -110px bottom -50px/ cover no-repeat $element-one-six
+
+      @supports (-webkit-appearance: none)
+        background: url("../img/image6.webp") left -110px bottom -50px/ cover no-repeat $element-one-six
+
+
+    .projects__element--nine
+
+      .projects__info
+        margin-top: 20%
+        margin-left: 55%
+
+      .projects__counter
+        margin-left: 50%
+
+@media (max-width: 650px)
+
+  .projects
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr
+
+    .projects__element--one, .projects__element--two, .projects__element--three, .projects__element--four, .projects__element--five, .projects__element--six, .projects__element--seven, .projects__element--eight, .projects__element--nine, .projects__element--ten
+      grid-column: span 1
+      grid-row: span 1
+
+    .projects__element--five
+
+      .projects__counter
+        margin-bottom: 10%
+
+@media (max-width: 480px)
+
+  .projects
+
+    .projects__element--three, .projects__element--six, .projects__element--eight
+      display: block
+
+    .projects__element--three
+
+      .projects__info
+        margin: 5% 0 5% 5%
+
+      .projects__counter
+        margin: 0 0 5% 5%
+
+    .projects__element--four
+
+      .projects__info
+        margin-left: 35%
+
+      .projects__counter
+        margin: 5% 0 0 35%
+        display: block
+
+      .projects__view
+        margin-bottom: 22px
+        display: inline-block
+
+      .projects__like
+        margin-left: 20px
+        margin-bottom: 5%
+
+    .projects__element--five
+      background: url("../img/image5.png") right bottom/ auto 150% no-repeat $element-one-five
+
+      @supports (-webkit-appearance: none)
+        background: url("../img/image5.webp") right bottom/ auto 150% no-repeat $element-one-five
+
+    .projects__element--six
+      background: url("..img/image6.png") -50px center/ auto 100% no-repeat $element-one-six
+
+      @supports (-webkit-appearance: none)
+        background: url("../img/image6.webp") -50px center/ auto 100% no-repeat $element-one-six
+
+      .projects__info
+        margin: 5% 0 5% 50%
+
+      .projects__counter
+        margin: 0 0 5% 50%
+
+    .projects__element--eight
+
+      .projects__info
+        margin-left: 10%
+
+      .projects__counter
+        display: block
+        margin-top: 5%
+        margin-left: 10%
+        margin-bottom: 5%
+
+      .projects__view
+        display: inline-block
+        margin-bottom: 22px
+
+
+

@@ -1,0 +1,59 @@
+$icon-bg: #5ec7cd
+$icon-bg-hover: #bec07b
+$icon-bg-studio: #fd5000
+
+.social
+  display: flex
+  align-items: flex-end
+
+  .social__link
+    display: inline-block
+    height: 22px
+    margin: 0 15px 0 0
+    &:last-child
+      margin-bottom: 0
+
+  &--small
+
+    .social__link
+      height: 13px
+
+  .social__svg
+    fill: $icon-bg
+    height: 22px
+    transition: 0.4s fill
+    &:hover
+      fill: $icon-bg-hover
+
+    &--facebook
+      width: 10px
+
+    &--twitter
+      width: 24px
+
+    &--linked
+      width: 23px
+
+    &--google
+      width: 18px
+
+    &--small_facebook, &--small_twitter, &--small_linked, &--small_google
+      fill: $icon-bg-studio
+      &:hover
+        fill: $black
+
+    &--small_facebook
+      width: 6px
+      height: 13px
+
+    &--small_twitter
+      width: 12px
+      height: 10px
+
+    &--small_linked
+      width: 13px
+      height: 12px
+
+    &--small_google
+      width: 12px
+      height: 13px

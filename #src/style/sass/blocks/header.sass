@@ -1,0 +1,86 @@
+$header-right-BG: #7acec3
+
+.header
+  display: grid
+  grid-template-columns: repeat(16,1fr)
+
+  .header__left
+    grid-column: span 11
+    background: url("../img/image1.png") right center no-repeat
+    background-size: 100%
+    padding: fun-width-interest(50px,1035px) 0 fun-width-interest(100px,1035px) fun-width-interest(170px,1035px)
+
+    @supports (-webkit-appearance: none)
+      background: url("../img/image1.webp") right center no-repeat
+      background-size: 100%
+
+    @media (min-resolution: 2dppx), (min-width: 1500px)
+      background-image: url("../img/image1-2x.png")
+
+      @supports (-webkit-appearance: none)
+        background: url("../img/image1-2x.webp") right center no-repeat
+        background-size: 100%
+
+  .header__logo
+    margin: 0 0 fun-width-interest(55px,870px) 0
+
+  .header__social
+    margin: fun-width-interest(55px,870px) 0 0 fun-width-interest(16px,870px)
+
+  .header__right
+    grid-column: span 5
+    background-color: $header-right-BG
+    position: relative
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="100%" x2="100%" y2="0" stroke="rgb(255,255,255)" stroke-width="1"/></svg>')
+
+  .header__address
+    position: absolute
+    bottom: fun-width-interest(167px,500px)
+    left: fun-width-interest(60px,465px)
+
+  .header__contact
+    position: absolute
+    bottom: fun-width-interest(100px,500px)
+    left: fun-width-interest(135px,465px)
+
+
+@media (max-width: 1080px)
+  .header
+
+    .header__address
+      bottom: fun-width-interest(200px,500px)
+
+@media (max-width: 980px)
+  .header
+
+    .header__left
+      grid-column: span 9
+
+    .header__right
+      grid-column: span 7
+
+
+@media (max-width: 768px)
+  .header
+    grid-template-columns: 1fr
+
+    .header__left, .header__right
+      grid-column: span 1
+
+    .header__left
+      order: 2
+
+    .header__right
+      order: 1
+
+    .header__address,.header__contact
+      position: static
+
+    .header__address
+      margin: 10% 0 7% 10%
+
+    .header__contact
+      margin: 10% 0 10% 40%
+
+
+

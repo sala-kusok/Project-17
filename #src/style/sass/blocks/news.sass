@@ -1,0 +1,110 @@
+$news-left-bg: #d4edbf
+$subtitle-color: #333333
+$text-color: #6a6969
+$link-color: #fd5000
+
+.news
+  display: grid
+  grid-template-columns: repeat(16, 1fr)
+
+  .news__left
+    grid-column: span 5
+    background-color: $news-left-bg
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="100%" x2="100%" y2="0" stroke="rgb(255,255,255)" stroke-width="1"/></svg>')
+
+  .news__title
+    font-size: fun-px-tp-em(48px)
+    color: $white
+    text-transform: uppercase
+    line-height: 1
+    margin: fun-width-interest(300px,465px) 0 fun-width-interest(168px,465px) fun-width-interest(220px,465px)
+
+  .news__right
+    grid-column: span 11
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding: fun-width-interest(80px,1035px) fun-width-interest(164px,1035px) fun-width-interest(60px,1035px) fun-width-interest(100px,1035px)
+
+  .news__element
+    flex: 0 0 fun-width-interest(370px,770px)
+    overflow: hidden
+
+  .news__subtitle
+    font-size: fun-px-tp-em(24px)
+    font-family: "robotocondensedBold", sans-serif
+    color: $subtitle-color
+    font-weight: 700
+    text-transform: uppercase
+    line-height: 1
+    margin: 0
+    min-height: 47px
+
+  .news__date
+    font-size: fun-px-tp-em(12px)
+    color: $text-color
+    text-transform: uppercase
+    line-height: 1
+    margin: 2px 0
+
+  .news__img
+    display: block
+    width: 100%
+    margin: 20px 0
+
+  .news__text
+    font-size: fun-px-tp-em(12px)
+    color: $text-color
+    line-height: 1.167
+    text-align: justify
+    margin: 6px 0
+
+  .news__link
+    font-size: fun-px-tp-em(12px)
+    color: $link-color
+    text-transform: uppercase
+    line-height: 1.167
+    text-decoration: none
+    float: right
+
+    &:hover
+      text-decoration: underline
+
+
+@media (max-width: 1500px)
+
+  .news
+
+    .news__right
+      padding: 5%
+
+@media (max-width: 1200px)
+
+  .news
+
+    .news__title
+      font-size: fun-px-tp-em(34px)
+      margin-left: 55%
+
+@media (max-width: 768px)
+
+  .news
+
+    .news__left
+      grid-column: span 16
+
+    .news__title
+      margin: 50% 0 30% 55%
+
+    .news__right
+      grid-column: span 16
+
+@media (max-width: 480px)
+
+  .news
+
+    .news__right
+      padding: 3%
+
+    .news__element
+      flex: 0 0 100%
